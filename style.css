@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,500&family=Playpen+Sans:wght@300;400&display=swap");
+* {
+  scroll-behavior: smooth;
+  font-family: "Playpen Sans", cursive;
+  margin: 0;
+}
+body {
+  align-items: center;
+  min-height: 50vh;
+  background: url(image/solid-concrete-wall-textured-backdrop.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.main::after {
+  content: "";
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to top, rgb(53, 53, 53), transparent);
+}
+.main .icon {
+  font-size: 250px;
+  color: #f1f2f4;
+}
+.main h1 {
+  font-size: 35px;
+  color: white;
+  font-weight: 700;
+}
+.explore p {
+  color: rgb(184, 182, 182);
+  font-size: 28px;
+  font-weight: 500;
+}
+.explore {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+.explore i {
+  color: rgb(184, 182, 182);
+  margin: 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.explore i:hover {
+  scale: 1.2;
+  transition: 0.1s;
+  color: white;
+}
+.search-section {
+  background: rgb(53, 53, 53);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.feild {
+  margin-top: 25vh;
+  width: 70%;
+  justify-content: center;
+  display: flex;
+}
+.feild input {
+  width: 90%;
+  height: 40px;
+  border-radius: 1rem 0 0 0;
+  border: none;
+  color: rgb(71, 70, 70);
+  font-size: 20px;
+  text-transform: capitalize;
+  padding-left: 20px;
+}
+.feild .get-repos {
+  background-color: white;
+  height: 40px;
+  margin-left: 4px;
+  width: 10%;
+  font-weight: 300;
+  line-height: 45px;
+  border-radius: 0 1rem 0 0;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+.feild .get-repos:hover {
+  background-color: darkgray;
+  transition: 0.3s;
+}
+.data {
+  width: 70%;
+  background: rgb(80, 80, 80);
+  color: rgb(184, 182, 182);
+  border-radius: 0 0 1rem 1rem;
+  padding-bottom: 10px;
+  margin: 10px 0 40px 0;
+  padding-top: 10px;
+  font-size: 20px;
+}
+.repo-box {
+  background-color: #f1f2f4;
+  margin: 9px;
+  color: rgb(28, 28, 28);
+  padding-left: 10px;
+  text-wrap: wrap;
+  overflow: hidden;
+}
+.repo-box:last-child {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.repo-box a,
+.repo-box span {
+  text-decoration: none;
+  float: right;
+  padding-left: 3px;
+  background-color: rgb(57, 56, 56);
+  color: white;
+  margin: 2px;
+  border-radius: 0.2rem;
+  padding-right: 2px;
+}
+.repo-box a {
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  .main .icon {
+    font-size: 190px;
+  }
+  .main h1 {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .explore p {
+    font-size: 20px;
+    font-weight: 300;
+  }
+  .feild input {
+    width: 70%;
+  }
+  .feild .get-repos {
+    width: 30%;
+    font-size: 15px;
+  }
+  .repo-box a,
+  .repo-box span {
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .main .icon {
+    font-size: 120px;
+  }
+  .main h1 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .repo-box {
+    font-size: 14px;
+    text-wrap: wrap;
+    height: 2.5rem;
+    align-items: center;
+  }
+  .repo-box a,
+  .repo-box span {
+    font-size: 10px;
+    /* margin-bottom: 10px; */
+
+    right: 4px;
+  }
+}
+@media only screen and (max-width: 1070px) {
+  .feild input {
+    width: 70%;
+  }
+  .feild .get-repos {
+    width: 30%;
+    font-size: 15px;
+  }
+}
